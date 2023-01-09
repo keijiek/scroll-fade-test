@@ -1,0 +1,9 @@
+@use '../common/global';
+
+
+.fadeup {
+  position: fixed;
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: .35s ease;
+}

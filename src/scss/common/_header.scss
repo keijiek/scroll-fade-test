@@ -1,0 +1,16 @@
+@use '../common/global' as *;
+
+.header {
+  position: static;
+  background-color: white;
+  background-image: none;
+}
+.header__logo {
+  margin: 0;
+}
+.globalNavi {
+  position: static;
+  background-color: white;
+  background-image: none;
+  margin: 0;
+}

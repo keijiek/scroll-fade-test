@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./ts/main.ts"></script>
-    <p><a href="./second.html">2ページ目</a></p>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="./">fade-in and fade-out by scrolling</a>
+    </h1>
+  </header>
+  <nav class="globalNavi">
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link active" href="./">Top</a></li>
+      <li class="nav-item"><a class="nav-link disabled"  href="./">2nd-Page</a></li>
+      <li class="nav-item"><a class="nav-link disabled" href="./">3rd-Page</a></li>
+    </ul>
+  </nav>
+  <main>
+    <!-- Main Visual -->
+    <div class="mainVisual">
+      main-visual
+    </div>
+
+    <!-- Polisies -->
+    <div class="policies">
+      <div class="policyItem">
+        <h2 class="policyItem__head">ポリシー1</h2>
+        <div class="policyItem__text">いろはにほへとちりぬるを</div>
+      </div>
+      <div class="policyItem">
+        <h2 class="policyItem__head">ポリシー2</h2>
+        <div class="policyItem__text">わかよたれそつねならむ</div>
+      </div>
+      <div class="policyItem">
+        <h2 class="policyItem__head">ポリシー3</h2>
+        <div class="policyItem__text">うゐのおくやまけふこえて</div>
+      </div>
+      <div class="policyItem">
+        <h2 class="policyItem__head">ポリシー4</h2>
+        <div class="policyItem__text">あさきゆめみしゑいもせすん</div>
+      </div>
+    </div>
+
+  </main>
+  <footer></footer>
+
+  <script type="module" src="./ts/main.ts"></script>
+</body>
 </html>

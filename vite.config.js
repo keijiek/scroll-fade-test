@@ -40,7 +40,11 @@ export default defineConfig({
   plugins:[],
   resolve: {
     alias: {
-      // '~bootstrap': path.resolve(__dirname,'node_modules/bootstrap'),
+      '~bootstrap': path.resolve(__dirname,'node_modules/bootstrap'),
+      '~images' : path.resolve(__dirname, 'src/images'),
+      '~scss' : path.resolve(__dirname, 'src/scss'),
+      '~ts' : path.resolve(__dirname, 'src/ts'),
+      '~src' : path.resolve(__dirname, 'src'),
     }
   }
 });
