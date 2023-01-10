@@ -26,7 +26,7 @@
   transform: translate(0, 20px);  // 可視化される前の座標を下に 20px 下げておき、transition のあいだ、可視化後の座標まで移動する過程が見える
   width: 100%;
   height: 100vh;
-  opacity: 1;
+  opacity: 0;
 }
 
 
