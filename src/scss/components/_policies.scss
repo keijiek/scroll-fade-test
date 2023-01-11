@@ -1,5 +1,7 @@
 @use '../common/global';
-
+.policies {
+  height: 380vh;
+}
 .policies::before {
   content: '';
   position: fixed;

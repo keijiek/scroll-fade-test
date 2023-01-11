@@ -36,13 +36,14 @@ class PolicyItem {
 class BoundaryAllocator {
   private policiesElement:HTMLElement;
   private fadeupbaleItemsLength:number;
-  private upperBufferRate:number = 0.00;
-  private bottomBufferRate:number = 0.15;
+  private upperBufferRate:number;
+  private bottomBufferRate:number;
 
-  constructor(policiesElement:HTMLElement, fadeupbaleItemsLength:number) {
+  constructor(policiesElement:HTMLElement, fadeupbaleItemsLength:number, upperBufferRate:number = 0, bottomBufferRate:number = 0.15) {
     this.policiesElement = policiesElement;
     this.fadeupbaleItemsLength = fadeupbaleItemsLength;
-    console.log('BoundaryAllocator is made. ' + this.fadeupbaleItemsLength);
+    this.upperBufferRate = upperBufferRate;
+    this.bottomBufferRate = bottomBufferRate;
   }
 
   getBoundaries():Array<{start:number, end:number}> {
@@ -73,11 +74,11 @@ class BoundaryAllocator {
   }
 }
 
-export default function scrollEvents(policiesElementId:string, fadeupableItemClassName:string, fadeupClassName:string):void {
+export default function scrollEvents(policiesElementId:string, fadeupableItemClassName:string, fadeupClassName:string, upperBufferRate:number, bottomBufferRate:number):void {
   const scrollAmount = window.pageYOffset;
   console.log(scrollAmount);
   const itemArray:Array<HTMLElement> = Array.from(document.querySelectorAll('.'+fadeupableItemClassName));// !!!ここが0だ。なぜか。
-  const boundaryAllocator:BoundaryAllocator = new BoundaryAllocator(document.getElementById(policiesElementId)!, itemArray.length);
+  const boundaryAllocator:BoundaryAllocator = new BoundaryAllocator(document.getElementById(policiesElementId)!, itemArray.length, upperBufferRate, bottomBufferRate);
 
   const policyItems:Array<PolicyItem> = boundaryAllocator.getBoundaries().map((visibleArea, index) => {
     return new PolicyItem(itemArray[index], fadeupClassName, visibleArea);
